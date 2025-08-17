@@ -1,11 +1,6 @@
 import allure
 from pages.base_page import BasePage
-from locators.main_page_locators import MainPageLocators
-from locators.account_page_locators import AccountPageLocators
 from locators.order_feed_page_locators import OrderFeedPageLocators
-import data
-import urls
-from urls import ACCOUNT_URL, BASE_URL
 
 
 class OrderFeedPage(BasePage):

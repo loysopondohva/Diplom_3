@@ -1,14 +1,8 @@
-from time import sleep
-
 import allure
-
 import data
-from locators.order_feed_page_locators import OrderFeedPageLocators
 from pages.main_page import MainPage
 from pages.account_page import AccountPage
 from pages.order_feed_page import OrderFeedPage
-from locators.main_page_locators import MainPageLocators
-import time
 
 
 @allure.feature('Основной функционал')

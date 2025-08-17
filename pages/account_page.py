@@ -1,12 +1,9 @@
-from time import sleep
-
 import allure
 
 import data
 from locators.account_page_locators import AccountPageLocators
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
-import urls
 from urls import ACCOUNT_URL, BASE_URL
 
 

@@ -3,7 +3,6 @@ from selenium.common import NoSuchElementException, TimeoutException
 
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
-import urls
 from urls import ACCOUNT_URL, BASE_URL
 
 

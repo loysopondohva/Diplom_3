@@ -1,9 +1,5 @@
 import allure
 from pages.main_page import MainPage
-from locators.main_page_locators import MainPageLocators
-# from pages.account_page import AccountPage
-from data import Credentials
-import time
 
 @allure.feature('Основной функционал')
 @allure.story('Тесты функционала главной страницы')
