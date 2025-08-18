@@ -8,19 +8,6 @@ from pages.order_feed_page import OrderFeedPage
 @allure.feature('Основной функционал')
 @allure.story('Тесты раздела Ленты заказов')
 class TestOrderFeedPage:
-
-    def test_firefox_transitions(self, driver):
-
-        account_page = AccountPage(driver)
-        order_feed_page = OrderFeedPage(driver)
-        main_page = MainPage(driver)
-        with allure.step('Логинимся в системе'):
-            user_email = data.Credentials.email
-            user_password = data.Credentials.password
-            account_page.login_to_account(user_email, user_password)
-
-        order_feed_page.click_to_order_feed_button()
-
     @allure.title('Тест увеличения счётчика "Выполнено за всё время" при создании заказа')
     def test_increase_count_total_orders(self, driver):
 

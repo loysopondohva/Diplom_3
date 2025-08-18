@@ -39,7 +39,7 @@ class MainPage(BasePage):
 
     @allure.step('Проверить, отображается всплывающее окно с информацией об ингредиенте')
     def is_ingredients_details_displayed(self):
-        element = self.driver.find_element(*MainPageLocators.CLOSE_INGREDIENT_DETAILS_BUTTON)
+        element = self.wait_for_visible_element(MainPageLocators.CLOSE_INGREDIENT_DETAILS_BUTTON)
         return element.is_displayed()
 
     @allure.step('Проверить, всплывающее окно с информацией об ингредиенте закрыто')

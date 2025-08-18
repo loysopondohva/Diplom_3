@@ -1,23 +1,11 @@
 import allure
 import pytest  # Обязательно импортируем pytest
-from selenium import webdriver
-
-class WebdriverFactory:
-    @staticmethod
-    def get_webdriver(browser_name):
-        if browser_name == "firefox":
-            with allure.step('Запускаем браузер Firefox'):
-                return webdriver.Firefox()
-        elif browser_name == "chrome":
-            with allure.step('Запускаем браузер Chrome'):
-                return webdriver.Chrome()
-        else:
-            raise ValueError(f"Unsupported browser: {browser_name}")
+from helpers.webdriver import WebdriverFactory
 
 # Эта функция добавляет возможность передачи параметра --browser в командной строке pytest
 def pytest_addoption(parser):
     parser.addoption(
-        "--browser", action="store", default="chrome", help="Выбор браузера: 'chrome' или 'firefox'."
+        "--browser", action="store", default="firefox", help="Выбор браузера: 'chrome' или 'firefox'."
     )
 
 @pytest.fixture
